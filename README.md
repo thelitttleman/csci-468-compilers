@@ -23,7 +23,7 @@ Once your repository is initialized, you can pull it down to your local machine.
 Next, you should add the class repository as an upstream git repo:
 
 ```bash
-$ git remote add upstream https://github.com/msu/csci-468-spring2024.git
+$ git remote add upstream https://github.com/msu/csci-468-spring2025.git
 $ git pull upstream main
 $ git push origin main
 ```
