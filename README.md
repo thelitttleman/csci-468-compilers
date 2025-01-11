@@ -12,7 +12,7 @@ Please set up your private repository via these instructions:
 
 - Create a *private* repository in your own account by
     - Going to <https://github.com/new>
-    - Enter the name `csci-468-spring2024-private`
+    - Enter the name `csci-468-spring2025-private`
     - Select `Private`
     - **DO NOT ADD A README.MD or .gitignore!**
     - Navigate to the `Settings` -> `Manage Access` section
