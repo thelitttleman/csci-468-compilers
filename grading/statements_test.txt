@@ -25,8 +25,8 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running edu.montana.csci.csci468.parser.CatscriptParserStatementsTest
-[ERROR] Tests run: 21, Failures: 0, Errors: 19, Skipped: 0, Time elapsed: 0.044 s <<< FAILURE! - in edu.montana.csci.csci468.parser.CatscriptParserStatementsTest
-[ERROR] functionDefStatement  Time elapsed: 0.022 s  <<< ERROR!
+[ERROR] Tests run: 21, Failures: 0, Errors: 19, Skipped: 0, Time elapsed: 0.043 s <<< FAILURE! - in edu.montana.csci.csci468.parser.CatscriptParserStatementsTest
+[ERROR] functionDefStatement  Time elapsed: 0.021 s  <<< ERROR!
 edu.montana.csci.csci468.parser.ParseErrorException: 
 Parse Errors Occurred:
 
@@ -63,11 +63,11 @@ Error: Unexpected Token
 
 	at edu.montana.csci.csci468.parser.CatscriptParserStatementsTest.functionDefStatement(CatscriptParserStatementsTest.java:144)
 
-[ERROR] functionCallStatement  Time elapsed: 0.001 s  <<< ERROR!
+[ERROR] functionCallStatement  Time elapsed: 0 s  <<< ERROR!
 java.lang.ClassCastException: class edu.montana.csci.csci468.parser.statements.SyntaxErrorStatement cannot be cast to class edu.montana.csci.csci468.parser.statements.FunctionCallStatement (edu.montana.csci.csci468.parser.statements.SyntaxErrorStatement and edu.montana.csci.csci468.parser.statements.FunctionCallStatement are in unnamed module of loader 'app')
 	at edu.montana.csci.csci468.parser.CatscriptParserStatementsTest.functionCallStatement(CatscriptParserStatementsTest.java:136)
 
-[ERROR] functionDefWithParamsStatement  Time elapsed: 0.001 s  <<< ERROR!
+[ERROR] functionDefWithParamsStatement  Time elapsed: 0 s  <<< ERROR!
 edu.montana.csci.csci468.parser.ParseErrorException: 
 Parse Errors Occurred:
 
@@ -129,7 +129,7 @@ Error: Unexpected Token
 
 	at edu.montana.csci.csci468.parser.CatscriptParserStatementsTest.functionDefWithParamsStatement(CatscriptParserStatementsTest.java:152)
 
-[ERROR] varStatementWithListType  Time elapsed: 0.001 s  <<< ERROR!
+[ERROR] varStatementWithListType  Time elapsed: 0.003 s  <<< ERROR!
 edu.montana.csci.csci468.parser.ParseErrorException: 
 Parse Errors Occurred:
 
@@ -297,7 +297,7 @@ Error: Unexpected Token
 
 	at edu.montana.csci.csci468.parser.CatscriptParserStatementsTest.varStatementWithStringType(CatscriptParserStatementsTest.java:101)
 
-[ERROR] varStatementWithImplicitType  Time elapsed: 0 s  <<< ERROR!
+[ERROR] varStatementWithImplicitType  Time elapsed: 0.001 s  <<< ERROR!
 edu.montana.csci.csci468.parser.ParseErrorException: 
 Parse Errors Occurred:
 
@@ -328,11 +328,11 @@ Error: Unexpected Token
 java.lang.ClassCastException: class edu.montana.csci.csci468.parser.statements.SyntaxErrorStatement cannot be cast to class edu.montana.csci.csci468.parser.statements.ForStatement (edu.montana.csci.csci468.parser.statements.SyntaxErrorStatement and edu.montana.csci.csci468.parser.statements.ForStatement are in unnamed module of loader 'app')
 	at edu.montana.csci.csci468.parser.CatscriptParserStatementsTest.forStatementEnsuresClosingBrace(CatscriptParserStatementsTest.java:36)
 
-[ERROR] assigmentStatement  Time elapsed: 0.002 s  <<< ERROR!
+[ERROR] assigmentStatement  Time elapsed: 0 s  <<< ERROR!
 java.lang.ClassCastException: class edu.montana.csci.csci468.parser.statements.SyntaxErrorStatement cannot be cast to class edu.montana.csci.csci468.parser.statements.AssignmentStatement (edu.montana.csci.csci468.parser.statements.SyntaxErrorStatement and edu.montana.csci.csci468.parser.statements.AssignmentStatement are in unnamed module of loader 'app')
 	at edu.montana.csci.csci468.parser.CatscriptParserStatementsTest.assigmentStatement(CatscriptParserStatementsTest.java:128)
 
-[ERROR] functionDefWithParamTypesStatement  Time elapsed: 0.001 s  <<< ERROR!
+[ERROR] functionDefWithParamTypesStatement  Time elapsed: 0 s  <<< ERROR!
 edu.montana.csci.csci468.parser.ParseErrorException: 
 Parse Errors Occurred:
 
@@ -424,7 +424,7 @@ Error: Unexpected Token
 
 	at edu.montana.csci.csci468.parser.CatscriptParserStatementsTest.functionDefWithParamTypesStatement(CatscriptParserStatementsTest.java:166)
 
-[ERROR] elseStatementEnsuresClosingBrace  Time elapsed: 0 s  <<< ERROR!
+[ERROR] elseStatementEnsuresClosingBrace  Time elapsed: 0.001 s  <<< ERROR!
 java.lang.ClassCastException: class edu.montana.csci.csci468.parser.statements.SyntaxErrorStatement cannot be cast to class edu.montana.csci.csci468.parser.statements.IfStatement (edu.montana.csci.csci468.parser.statements.SyntaxErrorStatement and edu.montana.csci.csci468.parser.statements.IfStatement are in unnamed module of loader 'app')
 	at edu.montana.csci.csci468.parser.CatscriptParserStatementsTest.elseStatementEnsuresClosingBrace(CatscriptParserStatementsTest.java:68)
 
@@ -470,7 +470,7 @@ Error: Unexpected Token
 
 	at edu.montana.csci.csci468.parser.CatscriptParserStatementsTest.returnStatementNoExprInFunction(CatscriptParserStatementsTest.java:180)
 
-[ERROR] varStatementWithIntType  Time elapsed: 0.001 s  <<< ERROR!
+[ERROR] varStatementWithIntType  Time elapsed: 0 s  <<< ERROR!
 edu.montana.csci.csci468.parser.ParseErrorException: 
 Parse Errors Occurred:
 
@@ -689,7 +689,7 @@ Error: Unexpected Token
 org.opentest4j.AssertionFailedError: expected: <Incompatible types> but was: <Unexpected Token>
 	at edu.montana.csci.csci468.parser.CatscriptParserTypeCheckingTest.returnTypeError(CatscriptParserTypeCheckingTest.java:83)
 
-[ERROR] functionCallsWorkProperly  Time elapsed: 0.001 s  <<< ERROR!
+[ERROR] functionCallsWorkProperly  Time elapsed: 0 s  <<< ERROR!
 edu.montana.csci.csci468.parser.ParseErrorException: 
 Parse Errors Occurred:
 
@@ -831,7 +831,7 @@ org.opentest4j.AssertionFailedError: expected: <Return statements must be within
 	at edu.montana.csci.csci468.parser.CatscriptParserErrorsTest.topLevelReturnStatementsAreAnError(CatscriptParserErrorsTest.java:47)
 
 [INFO] Running edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest
-[ERROR] Tests run: 8, Failures: 6, Errors: 2, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest
+[ERROR] Tests run: 8, Failures: 6, Errors: 2, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest
 [ERROR] paramsConflictWithGlobalVars  Time elapsed: 0 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <This name is already used in this program> but was: <Unexpected Token>
 	at edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest.paramsConflictWithGlobalVars(CatscriptParserSymbolCheckingTest.java:46)
@@ -928,7 +928,7 @@ Error: Unexpected Token
 
 	at edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest.ifStatementBranchesDoNotConflic(CatscriptParserSymbolCheckingTest.java:59)
 
-[ERROR] paramsDoNotConflictWithEachOther  Time elapsed: 0 s  <<< ERROR!
+[ERROR] paramsDoNotConflictWithEachOther  Time elapsed: 0.001 s  <<< ERROR!
 edu.montana.csci.csci468.parser.ParseErrorException: 
 Parse Errors Occurred:
 
@@ -1036,7 +1036,7 @@ org.opentest4j.AssertionFailedError: expected: <This name is already used in thi
 	at edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest.forVarConflict(CatscriptParserSymbolCheckingTest.java:40)
 
 [INFO] Running edu.montana.csci.csci468.parser.CatscriptParserExpressionsTest
-[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in edu.montana.csci.csci468.parser.CatscriptParserExpressionsTest
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in edu.montana.csci.csci468.parser.CatscriptParserExpressionsTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1083,8 +1083,8 @@ org.opentest4j.AssertionFailedError: expected: <This name is already used in thi
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.546 s
-[INFO] Finished at: 2025-03-25T17:48:33-06:00
+[INFO] Total time:  1.459 s
+[INFO] Finished at: 2025-03-26T20:05:14-06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project csci-468-spring2022: There are test failures.
 [ERROR] 
