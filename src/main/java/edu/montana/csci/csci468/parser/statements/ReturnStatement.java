@@ -20,7 +20,16 @@ public class ReturnStatement extends Statement {
         // TODO implement - recurse up the parent hierarchy and find a FunctionDefinitionStatement
         // use the `instanceof` operator in java
         // if there are none, return null
-        return null;
+        ParseElement cur = this;
+        while (!(cur instanceof FunctionDefinitionStatement) && cur.getParent() != null) {
+            cur = cur.getParent();
+        }
+        if (cur instanceof FunctionDefinitionStatement) {
+            return (FunctionDefinitionStatement) cur;
+        }
+        else {
+            return null;
+        }
     }
 
 
@@ -28,10 +37,25 @@ public class ReturnStatement extends Statement {
     public void validate(SymbolTable symbolTable) {
         FunctionDefinitionStatement function = getFunctionDefinitionStatement();
         if (function == null) {
+            // TODO - if there is no enclosing function add a ErrorType.INVALID_RETURN_STATEMENT error
+            this.addError(ErrorType.INVALID_RETURN_STATEMENT);
 
         } else {
             // TODO - if there is an expression associated with this return statement
             // ensure it is compatible with function.getType() or add an ErrorType.INCOMPATIBLE_TYPE error
+            CatscriptType funType = function.getType();
+            CatscriptType returnType = null;
+            if(this.expression != null) {
+                returnType = this.expression.getType();
+            }
+            if(returnType == null) {
+                if(funType != CatscriptType.VOID) {
+                    this.addError(ErrorType.INCOMPATIBLE_TYPES);
+                }
+            }
+            else if(funType != returnType) {
+                this.addError(ErrorType.INCOMPATIBLE_TYPES);
+            }
 
 
         }

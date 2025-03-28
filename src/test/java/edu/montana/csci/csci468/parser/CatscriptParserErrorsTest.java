@@ -17,7 +17,7 @@ public class CatscriptParserErrorsTest extends CatscriptTestBase {
     }
 
     @Test
-    public void returnCoverageErrorsWorks() {
+    public void returnCoverageErrorsWorks() { //function definition
         List<ParseError> errors = getErrors(
                 "function foo() : bool {" +
                         "  if(true) {" +
@@ -41,7 +41,7 @@ public class CatscriptParserErrorsTest extends CatscriptTestBase {
     }
 
     @Test
-    public void topLevelReturnStatementsAreAnError() {
+    public void topLevelReturnStatementsAreAnError() { //return validate
         List<ParseError> errors = getErrors(
                 "return true");
         assertError(errors, 0, ErrorType.INVALID_RETURN_STATEMENT, 1, 0);

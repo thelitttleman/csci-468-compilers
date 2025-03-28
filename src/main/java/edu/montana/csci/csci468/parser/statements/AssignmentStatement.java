@@ -41,6 +41,9 @@ public class AssignmentStatement extends Statement {
             addError(ErrorType.UNKNOWN_NAME);
         } else {
             // TODO - verify compatibility of types
+            if(symbolType != expression.getType()) {
+                this.addError(ErrorType.INCOMPATIBLE_TYPES);
+            }
         }
     }
 

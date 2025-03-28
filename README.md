@@ -56,7 +56,7 @@ statement = for_statement |
             function_call_statement;
 
 for_statement = 'for', '(', IDENTIFIER, 'in', expression ')', 
-                '{', { statement }, '}';
+                '{', { statement }, '}'; 
 
 if_statement = 'if', '(', expression, ')', '{', 
                     { statement }, 
