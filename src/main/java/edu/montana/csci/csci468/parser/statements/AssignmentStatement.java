@@ -52,7 +52,10 @@ public class AssignmentStatement extends Statement {
     //==============================================================
     @Override
     public void execute(CatscriptRuntime runtime) {
-        super.execute(runtime);
+        //JESUS CHRIST IM SO STUPID
+        Object result = expression.evaluate(runtime);
+        runtime.setValue(variableName, result);
+        return;
     }
 
     @Override

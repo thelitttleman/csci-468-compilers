@@ -604,6 +604,9 @@ public class CatScriptParser {
                 typeLiteral.setType(CatscriptType.ListType.getListType(typeLiteral2.getType()));
 
             }
+            else {
+                typeLiteral.setType(CatscriptType.OBJECT);
+            }
 
         }
         return typeLiteral;

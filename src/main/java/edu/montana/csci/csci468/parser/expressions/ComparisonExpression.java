@@ -70,8 +70,41 @@ public class ComparisonExpression extends Expression {
     //==============================================================
 
     @Override
-    public Object evaluate(CatscriptRuntime runtime) {
-        return super.evaluate(runtime);
+    public Object evaluate(CatscriptRuntime runtime) { //tests only requires integers, but need strings as well
+        Integer left = (Integer) leftHandSide.evaluate(runtime);
+        Integer right = (Integer) rightHandSide.evaluate(runtime);
+        if(this.isGreater()) {
+            if(left > right) {
+               return true;
+            }
+            else {
+                return false;
+            }
+        }
+        else if(this.isGreaterThanOrEqual()) {
+            if(left >= right) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        else if(this.isLessThan()) {
+            if(left < right) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        else {
+            if(left <= right) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
     }
 
     @Override

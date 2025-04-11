@@ -44,7 +44,7 @@ public class AdditiveExpression extends Expression {
                 rightHandSide.addError(ErrorType.INCOMPATIBLE_TYPES);
             }
         }
-        // TODO handle strings
+        // TODO handle strings - not needed?
     }
 
     @Override
@@ -67,13 +67,19 @@ public class AdditiveExpression extends Expression {
 
     @Override
     public Object evaluate(CatscriptRuntime runtime) {
-        Integer lhsValue = (Integer) leftHandSide.evaluate(runtime);
-        Integer rhsValue = (Integer) rightHandSide.evaluate(runtime);
-        //TODO handle string case
-        if (isAdd()) {
+        if(this.getType().equals(CatscriptType.INT)) {
+            Integer lhsValue = (Integer) leftHandSide.evaluate(runtime);
+            Integer rhsValue = (Integer) rightHandSide.evaluate(runtime);
+            if (isAdd()) {
+                return lhsValue + rhsValue;
+            } else {
+                return lhsValue - rhsValue;
+            }
+        }
+        else {
+            String lhsValue = String.valueOf(leftHandSide.evaluate(runtime));
+            String rhsValue = String.valueOf(rightHandSide.evaluate(runtime));
             return lhsValue + rhsValue;
-        } else {
-            return lhsValue - rhsValue;
         }
     }
 
