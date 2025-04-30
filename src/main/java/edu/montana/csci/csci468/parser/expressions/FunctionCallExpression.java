@@ -7,6 +7,7 @@ import edu.montana.csci.csci468.parser.ErrorType;
 import edu.montana.csci.csci468.parser.ParseError;
 import edu.montana.csci.csci468.parser.SymbolTable;
 import edu.montana.csci.csci468.parser.statements.FunctionDefinitionStatement;
+import org.objectweb.asm.Opcodes;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -81,7 +82,16 @@ public class FunctionCallExpression extends Expression {
 
     @Override
     public void compile(ByteCodeGenerator code) {
-        super.compile(code);
+        code.addVarInstruction(Opcodes.ALOAD, 0);//"this" pointer
+        FunctionDefinitionStatement function = getProgram().getFunction(name);
+        for (int i = 0; i < arguments.size(); i++) {
+            Expression argument = arguments.get(i);
+            argument.compile(code);
+            if(function.getParameterType(i).equals(CatscriptType.OBJECT)) {
+                box(code, argument.getType());
+            }
+        }
+        code.addMethodInstruction(Opcodes.INVOKESPECIAL, code.getProgramInternalName(), name, function.getDescriptor());
     }
 
 

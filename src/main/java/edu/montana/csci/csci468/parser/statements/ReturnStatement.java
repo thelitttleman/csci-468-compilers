@@ -5,6 +5,7 @@ import edu.montana.csci.csci468.eval.CatscriptRuntime;
 import edu.montana.csci.csci468.eval.ReturnException;
 import edu.montana.csci.csci468.parser.*;
 import edu.montana.csci.csci468.parser.expressions.Expression;
+import org.objectweb.asm.Opcodes;
 
 public class ReturnStatement extends Statement {
     private Expression expression;
@@ -92,7 +93,31 @@ public class ReturnStatement extends Statement {
 
     @Override
     public void compile(ByteCodeGenerator code) {
-        super.compile(code);
+        //if there is expression, compile onto operand stack
+        //potentially box the expression if func returns object
+        //emit Opcodes.IRETURN if primitive otherwise ARETURN
+        //otherwise (Opcodes.RETURN)
+        if(expression != null) {
+            expression.compile(code);
+            boolean flag = false;
+            if (getFunctionDefinitionStatement().getType() == CatscriptType.OBJECT) {
+                box(code, expression.getType());
+                flag = true;
+            }
+            if (expression.getType() != CatscriptType.INT && expression.getType() != CatscriptType.BOOLEAN) {
+                code.addInstruction(Opcodes.ARETURN);
+            }
+            else if (flag) {
+                code.addInstruction(Opcodes.ARETURN);
+            }
+            else {
+                code.addInstruction(Opcodes.IRETURN);
+            }
+        }
+        else {
+            code.addInstruction(Opcodes.RETURN);
+        }
+
     }
 
 }

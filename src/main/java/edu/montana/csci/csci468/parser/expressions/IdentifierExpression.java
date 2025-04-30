@@ -6,6 +6,7 @@ import edu.montana.csci.csci468.parser.CatscriptType;
 import edu.montana.csci.csci468.parser.ErrorType;
 import edu.montana.csci.csci468.parser.ParseError;
 import edu.montana.csci.csci468.parser.SymbolTable;
+import org.objectweb.asm.Opcodes;
 
 public class IdentifierExpression extends Expression {
     private final String name;
@@ -50,7 +51,37 @@ public class IdentifierExpression extends Expression {
 
     @Override
     public void compile(ByteCodeGenerator code) {
-        super.compile(code);
+        Integer i = code.resolveLocalStorageSlotFor(name);
+        if (i != null) {
+            //local
+            if(this.type == CatscriptType.INT || this.type == CatscriptType.BOOLEAN) {
+                code.addVarInstruction(Opcodes.ILOAD, i);
+            }
+            else {
+                code.addVarInstruction(Opcodes.ALOAD, i);
+            }
+        }
+        else {
+            //global
+            code.addVarInstruction(Opcodes.ALOAD, 0);
+            //help session 2 - need to have different getFields for each catscript type
+            if(this.type == CatscriptType.INT || this.type == CatscriptType.BOOLEAN) {
+                code.addFieldInstruction(Opcodes.GETFIELD, name, "I", code.getProgramInternalName());
+            }
+            else if(this.type == CatscriptType.STRING) {
+                code.addFieldInstruction(Opcodes.GETFIELD, name, "Ljava/lang/String;", code.getProgramInternalName());
+            }
+            else if(this.type instanceof CatscriptType.ListType) {
+                code.addFieldInstruction(Opcodes.GETFIELD, name, "Ljava/util/List;", code.getProgramInternalName());
+            }
+            else {
+                code.addFieldInstruction(Opcodes.GETFIELD, name, "Ljava/lang/Object;", code.getProgramInternalName());
+            }
+
+
+        }
+
+
     }
 
 

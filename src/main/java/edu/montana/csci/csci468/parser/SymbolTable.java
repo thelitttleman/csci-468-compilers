@@ -3,7 +3,6 @@ package edu.montana.csci.csci468.parser;
 import edu.montana.csci.csci468.parser.statements.FunctionDefinitionStatement;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Map;
 
