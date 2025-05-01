@@ -801,7 +801,7 @@ public class edu/montana/csci/csci466/bytecode/CatScriptProgram20 extends edu/mo
 
 
  ================================================
-[ERROR] Tests run: 12, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.06 s <<< FAILURE! - in edu.montana.csci.csci468.bytecode.CatscriptStatementExecutionTest
+[ERROR] Tests run: 12, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.063 s <<< FAILURE! - in edu.montana.csci.csci468.bytecode.CatscriptStatementExecutionTest
 [ERROR] globalVarStatementsAreSharedAcrossFunctionCalls  Time elapsed: 0.004 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "edu.montana.csci.csci468.bytecode.ByteCodeGenerator.resolveLocalStorageSlotFor(String)" is null
 	at edu.montana.csci.csci468.bytecode.CatscriptStatementExecutionTest.globalVarStatementsAreSharedAcrossFunctionCalls(CatscriptStatementExecutionTest.java:66)
@@ -1964,7 +1964,7 @@ public class edu/montana/csci/csci466/bytecode/CatScriptProgram55 extends edu/mo
 
 
  ================================================
-[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in edu.montana.csci.csci468.bytecode.CatscriptBasicExpressionCompileTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in edu.montana.csci.csci468.bytecode.CatscriptBasicExpressionCompileTest
 [INFO] Running edu.montana.csci.csci468.bytecode.CatscriptFunctionArgsAndReturnCompileTest
  JVM Bytecode ===================================
 
@@ -2706,7 +2706,7 @@ public class edu/montana/csci/csci466/bytecode/CatScriptProgram73 extends edu/mo
 
  ================================================
 [ERROR] Tests run: 15, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.015 s <<< FAILURE! - in edu.montana.csci.csci468.bytecode.CatscriptFunctionArgsAndReturnCompileTest
-[ERROR] returnListWithComponentTypeWorksProperlyWithMultipleReturnOptions  Time elapsed: 0.001 s  <<< ERROR!
+[ERROR] returnListWithComponentTypeWorksProperlyWithMultipleReturnOptions  Time elapsed: 0 s  <<< ERROR!
 edu.montana.csci.csci468.parser.ParseErrorException: 
 Parse Errors Occurred:
 
@@ -2730,8 +2730,8 @@ Error: Missing return statement in function
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.214 s
-[INFO] Finished at: 2025-05-01T08:03:53-06:00
+[INFO] Total time:  1.238 s
+[INFO] Finished at: 2025-05-01T12:25:45-06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project csci-468-spring2022: There are test failures.
 [ERROR] 
