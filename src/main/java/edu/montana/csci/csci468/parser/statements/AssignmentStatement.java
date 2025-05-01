@@ -68,7 +68,7 @@ public class AssignmentStatement extends Statement {
 
     @Override
     public void compile(ByteCodeGenerator code) {
-        if(isGlobal()) {
+        if(global) {
             //a field
             //iterate through types
             String descriptor;

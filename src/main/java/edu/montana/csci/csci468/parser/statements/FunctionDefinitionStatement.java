@@ -111,7 +111,7 @@ public class FunctionDefinitionStatement extends Statement {
         }
         if(statements.size() > 0) {
             Statement endStatement = statements.get(statements.size() - 1);
-            if (endStatement instanceof ReturnStatement == false) {
+            if (endStatement instanceof ReturnStatement == false && endStatement instanceof IfStatement == false) {
                 flag = false;
             }
         }
@@ -162,7 +162,7 @@ public class FunctionDefinitionStatement extends Statement {
     //==============================================================
     @Override
     public void execute(CatscriptRuntime runtime) {
-
+        return;
     }
 
     @Override
@@ -179,7 +179,7 @@ public class FunctionDefinitionStatement extends Statement {
         for (Statement statement : body) {
             statement.compile(code);
         }
-        if (type.equals(CatscriptType.VOID)) {
+        if (getType().equals(CatscriptType.VOID)) {
             code.addInstruction(Opcodes.RETURN);
         }
         code.popMethod();
