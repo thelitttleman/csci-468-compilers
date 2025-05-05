@@ -25,31 +25,50 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest
-[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s - in edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest
 [INFO] Running edu.montana.csci.csci468.parser.CatscriptParserStatementsTest
-[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in edu.montana.csci.csci468.parser.CatscriptParserStatementsTest
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in edu.montana.csci.csci468.parser.CatscriptParserStatementsTest
 [INFO] Running edu.montana.csci.csci468.parser.CatscriptParserTypeCheckingTest
-[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in edu.montana.csci.csci468.parser.CatscriptParserTypeCheckingTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in edu.montana.csci.csci468.parser.CatscriptParserTypeCheckingTest
 [INFO] Running edu.montana.csci.csci468.parser.CatscriptParserErrorsTest
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in edu.montana.csci.csci468.parser.CatscriptParserErrorsTest
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in edu.montana.csci.csci468.parser.CatscriptParserErrorsTest
+[ERROR] returnCoverageErrorsWorks  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: No error at index 0
+	at edu.montana.csci.csci468.parser.CatscriptParserErrorsTest.assertError(CatscriptParserErrorsTest.java:56)
+	at edu.montana.csci.csci468.parser.CatscriptParserErrorsTest.returnCoverageErrorsWorks(CatscriptParserErrorsTest.java:27)
+
 [INFO] Running edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest
-[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest
 [INFO] Running edu.montana.csci.csci468.parser.CatscriptParserExpressionsTest
-[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in edu.montana.csci.csci468.parser.CatscriptParserExpressionsTest
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in edu.montana.csci.csci468.parser.CatscriptParserExpressionsTest
 [INFO] Running edu.montana.csci.csci468.eval.CatscriptStatementExecutionTest
 [INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in edu.montana.csci.csci468.eval.CatscriptStatementExecutionTest
 [INFO] Running edu.montana.csci.csci468.eval.CatscriptBasicExpressionEvalTest
-[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in edu.montana.csci.csci468.eval.CatscriptBasicExpressionEvalTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in edu.montana.csci.csci468.eval.CatscriptBasicExpressionEvalTest
 [INFO] Running edu.montana.csci.csci468.eval.CatscriptFunctionArgsAndReturnEvalTest
 [INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in edu.montana.csci.csci468.eval.CatscriptFunctionArgsAndReturnEvalTest
 [INFO] 
 [INFO] Results:
 [INFO] 
-[INFO] Tests run: 119, Failures: 0, Errors: 0, Skipped: 0
+[ERROR] Failures: 
+[ERROR]   CatscriptParserErrorsTest.returnCoverageErrorsWorks:27->assertError:56 No error at index 0
+[INFO] 
+[ERROR] Tests run: 119, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
+[INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.360 s
-[INFO] Finished at: 2025-05-01T12:35:11-06:00
+[INFO] Total time:  1.231 s
+[INFO] Finished at: 2025-05-03T01:01:05-06:00
 [INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project csci-468-spring2022: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/lucas_bega/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
