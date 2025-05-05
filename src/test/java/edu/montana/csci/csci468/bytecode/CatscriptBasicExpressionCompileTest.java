@@ -43,6 +43,7 @@ public class CatscriptBasicExpressionCompileTest extends CatscriptTestBase {
         assertEquals("anull\n", compile("\"a\" + null"));
     }
 
+
     @Test
     void comparisonExpressionCompilesProperly() {
         assertEquals("false\n", compile("1 > 2"));

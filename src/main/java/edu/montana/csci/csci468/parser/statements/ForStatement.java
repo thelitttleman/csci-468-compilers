@@ -106,7 +106,7 @@ public class ForStatement extends Statement {
         //astore the result into the iterator slot
         code.addVarInstruction(Opcodes.ASTORE, iteratorSlot);
 
-        code.addLabel(iterationStart);
+        code.addLabel(iterationStart); //started the loop
         //check
         code.addVarInstruction(Opcodes.ALOAD, iteratorSlot);
 
