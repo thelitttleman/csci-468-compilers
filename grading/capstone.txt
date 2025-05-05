@@ -1,4 +1,1 @@
-Errors:
-
-- Missing source zip
-- Missing lucas_bega_portfolio.pdf
+All Good
